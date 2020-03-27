@@ -1,0 +1,3 @@
+# AddOutputFilter INCLUDES .html
+Options +Includes
+AddHandler server-parsed html

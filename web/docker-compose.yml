@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  httpd:
+    image: diamonddai/php-apache-ext
+    ports:
+      - 80:80
+    volumes:
+      - ./htdocs/:/var/www/html/
+
+  gulp_scss:
+    image: diamonddai/gulp-scss
+    volumes:
+      - "./htdocs/assets/src/scss:/opt/assets/scss/"
+      - "./htdocs/assets/css:/opt/assets/css/"
+
+  webpack_ts:
+    image: diamonddai/webpack-ts
+    volumes:
+      - "./htdocs/assets/src/ts:/opt/webpack/src/"
+      - "./htdocs/assets/js:/opt/webpack/dist/"
