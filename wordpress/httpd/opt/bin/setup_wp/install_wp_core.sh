@@ -35,4 +35,11 @@ if [ -z "$(ls /var/www/html/${WP_DIR}/wp-content/themes/${WP_THEME_NAME})" ]; th
 fi
 wp theme activate $WP_THEME_NAME
 
+# core update
+wp core update
+wp core update-db
+# 翻訳を最新に変更
+wp language core update
+wp language plugin update --all
+
 echo "setup_wp_install.sh end"

@@ -5,7 +5,7 @@ admin_user: admin_user
 plugins:
   - advanced-custom-fields
   - all-in-one-seo-pack
-  - classic-editor
+  - disable-gutenberg
   - custom-post-type-permalinks
   - duplicate-post
   - intuitive-custom-post-order

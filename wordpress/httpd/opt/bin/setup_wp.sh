@@ -104,5 +104,12 @@ init_wp_content $WP_DIR
 
 # 日本語化
 sudo -u www-data wp language core install ja --activate
+# timezoneを日本に変更
+# sudo -u www-data wp option update timezone_string $(wp eval "echo _x( '0', 'default GMT offset or timezone string' );")
+sudo -u www-data wp option update timezone_string 'Asia/Tokyo'
+
+
+# 翻訳を最新に変更
+wp language theme update --all
 
 echo "setup finished."
